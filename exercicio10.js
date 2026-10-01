@@ -5,8 +5,8 @@ const produtos = [
   { id: 4, nome: "Monitor", preco: 1200, estoque: 3, ativo: true }
 ];
 
-const maiorQueZeroECem = produtos.filter((produto) => {
-    return produto.estoque >0 && produto.preco >= 100;
-});
+const patrimonioTotal = produtos.reduce((acumulador, produto) => {
+    return acumulador + (produto.preco * produto.estoque);
+}, 0);
 
-console.log("")
+console.log("Patrimonio total em estoque:" , patrimonioTotal);
