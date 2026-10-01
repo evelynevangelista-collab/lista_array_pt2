@@ -5,6 +5,6 @@ const produtos = [
   { id: 4, nome: "Monitor", preco: 1200, estoque: 3, ativo: true }
 ];
 
-const precoSuperior = produtos.some(produtos => produtos.preco > 3000);
+const produtosInativos = produtos.some(produto => produto.ativo === false);
 
-console.log(precoSuperior);
+console.log(produtosInativos);
